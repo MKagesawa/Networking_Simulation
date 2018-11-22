@@ -33,7 +33,7 @@ class StopAndWaitHost:
     elif (tick - self.packet_sent_time >= self.timeout_calculator.timeout):
       # Timeout has been exceeded, retransmit packet
       # following the same procedure as above when transmitting a packet for the first time
-      packet = Packet(tick, self.in_order_rx_seq)
+      packet = Packet(tick, self.in_order_rx_seq + 1)
 
       # Exponentially back off the timer
       self.timeout_calculator.exp_backoff()
