@@ -29,3 +29,13 @@ python3 simulator.py LS (or DV) file_input --graph_file line.graph
 
 ### Run with Random Input
 python3 simulator.py DV (or LS) rand_input --link_prob 0.5 --seed 1 --num_routers 10
+
+## Input Packet Queueing
+
+### Run Parallel Iterative Match (PIM) Algorithm
+python3 pim.py 16 0.5 1 4
+Inputs: <Number of Input Ports>, <Packet Arrival Probability at each Input Queue>, <Random Seed>, <Number of PIM Iterations>
+
+### Run First-In, First-Out (FIFO) Algorithm
+python3 fifo.py 16 0.4 1
+Inputs: <Number of Input Ports>, <Packet Arrival Probability at each Input Queue>, <Random Seed>
